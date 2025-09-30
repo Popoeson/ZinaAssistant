@@ -26,8 +26,8 @@ jobs:
       - name: List Gradle tasks
         run: ./gradlew tasks --all
 
-      - name: Build with Gradle
-        run: ./gradlew assembleDebug --stacktrace --info
+      - name: Build Debug APK
+        run: ./gradlew :app:assembleDebug --stacktrace --info
 
       - name: List build outputs
         run: ls -R
