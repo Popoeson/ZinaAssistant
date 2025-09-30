@@ -4,17 +4,17 @@ plugins {
 }
 
 android {
-    namespace "com.example.zinaassistant"  // change to your package name
+    namespace "com.zinaassistant"
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.zinaassistant"
-        minSdk 24
+        applicationId "com.zinaassistant"
+        minSdk 21
         targetSdk 34
         versionCode 1
         versionName "1.0"
     }
-
+    
     buildTypes {
         release {
             minifyEnabled false
