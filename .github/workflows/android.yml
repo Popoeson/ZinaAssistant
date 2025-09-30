@@ -23,11 +23,18 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
+      - name: List Gradle tasks
+        run: ./gradlew tasks --all
+
       - name: Build with Gradle
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --stacktrace --info
+
+      - name: List build outputs
+        run: ls -R
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: Zina-APK
-          path: '**/build/outputs/apk/debug/*.apk'
+          path: "**/build/outputs/apk/debug/*.apk"
+          if-no-files-found: warn
